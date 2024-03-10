@@ -145,27 +145,29 @@ h1 {
     padding: 10px;
     margin: 0 0 20px 0;
 }
-.travel-title,
-.bacon-whole,
+
+.fitz-whole,
 .bread-whole,
-.chiangmai-whole {
+.falls-whole {
     background-color: rgb(213, 252, 220);
 }
 
-.recipes-title,
-.fitz-whole,
-.guacamole-whole,
+.bacon-whole,
+.cookies-whole,
 .shanghai-whole {
     background-color: rgba(178, 249, 249, 0.711);
 }
-.pets-title,
+
 .cody-whole,
-.cookies-whole, 
-.falls-whole {
+.guacamole-whole,
+.chiangmai-whole {
     background-color: rgb(252, 235, 183);
 }
 
 .homepage-title,
+.pets-title,
+.recipes-title,
+.travel-title,
 .index-main,
 .zucchini-whole {
     background-color: rgb(240, 225, 251);
