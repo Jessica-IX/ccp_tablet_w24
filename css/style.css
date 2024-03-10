@@ -1,0 +1,537 @@
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+main {
+    margin: 20px;
+}
+.index-main {
+    position: relative;
+    height: 80%;
+    z-index: -1;
+}
+
+.index-p {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 25px;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 80%;
+}
+
+a:not(.recipes-link) {
+    color: white;
+    text-decoration: none;
+    font-family: "Arial Black", Helvetica, sans-serif;
+}
+
+.dropdown li a {
+    font-family: "Gill Sans", Times, Arial;
+    font-weight: bold;
+}
+
+.dropdown li {
+    border-top: 5px solid white;
+    font-size: 0.8rem;
+    padding: 5px 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+a.skip-to-content-link {
+    position: absolute; 
+    transform: translateY(-200%);
+    color:black;
+}
+
+a.skip-to-content-link:focus {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    position: relative;
+    transform: translateY(0%);
+} 
+
+ul.navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0.2rem;
+}
+
+li.nav-button {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+li.active {
+    background-color: white;
+    border-top: 2px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 50%;
+}
+
+li.active a{
+    color: black;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+li {
+    font-family: "Gill Sans", 'Times New Roman', serif ;
+    line-height: 1.5;
+}
+
+ul:not(.navigation, .dropdown) {
+    list-style-type: disc;
+    margin-left: 20px;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+h1 {
+    margin: 5px;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-style: italic;
+    font-size: 1.7rem;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color:  black;
+}
+
+.pets-title,
+.recipes-title,
+.travel-title {
+    margin: 0;
+    padding: 15px;
+}
+
+.bacon-whole,
+.fitz-whole,
+.cody-whole,
+.cookies-whole,
+.bread-whole,
+.guacamole-whole,
+.zucchini-whole,
+.sandwich-whole,
+.shanghai-whole,
+.falls-whole,
+.chiangmai-whole
+ {
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
+.travel-title,
+.bacon-whole,
+.bread-whole,
+.chiangmai-whole {
+    background-color: rgb(213, 252, 220);
+}
+
+.recipes-title,
+.fitz-whole,
+.guacamole-whole,
+.shanghai-whole {
+    background-color: rgba(178, 249, 249, 0.711);
+}
+.pets-title,
+.cody-whole,
+.cookies-whole, 
+.falls-whole {
+    background-color: rgb(252, 235, 183);
+}
+
+.zucchini-whole {
+    background-color: rgb(240, 225, 251);
+}
+.sandwich-whole {
+    background-color: rgb(255, 201, 201);
+}
+
+h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 5px;
+    font-family: "Arial Black", Georgia, Times;
+    color: white;
+    background-color: black;
+}
+
+h3 {
+    font-family: "Gill Sans", Times, Arial;
+    font-size: 1.2rem;
+    padding: 10px;
+    display: inline-block;
+}
+
+h3:not(.creator) {
+    font-weight: bold;
+}
+
+p, figcaption {
+    line-height: 1.5;
+    padding: 5px;
+}
+
+p {
+    font-family: "Gill Sans", Times, Arial;
+}
+
+.creator {
+    font-style: italic;
+}
+
+.dropdown {
+    display: none;
+    text-align: center;
+}
+
+.bacon-photos,
+.fitz-photos,
+.cody-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.bread-photos,
+.guacamole-photos,
+.cookie-photos,
+.zucchini-photos,
+.sandwich-photos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.shanghai-photos1,
+.shanghai-photos2,
+.falls-photos1,
+.falls-photos2,
+.thailand-photos1,
+.thailand-photos2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+}
+
+img, video {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+}
+
+.pet-profile,
+.recipes-profile,
+.travel-profile {
+    border-radius: 10%;
+}
+
+.pet-profile {
+    height:380px;
+}
+
+.cookie-items,
+.bread-items,
+.guacamole-items,
+.zucchini-items,
+.sandwich-items {
+    max-width: 45%;
+}
+
+@media (prefers-reduced-motion) {
+    .gif {
+        display: none;
+      }
+}
+
+/*iPad min & iPad*/
+@media screen and (min-width: 700px) {
+    ul.navigation {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .main {
+        margin-top: 90px;
+    }
+    li {
+        font-size: 1.5rem;
+    }
+
+    p, li:not(.nav-button), figcaption {
+        margin-left: 20px;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+        margin: 0 10px;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .bacon-whole,
+    .fitz-whole,
+    .cody-whole,
+    .cookies-whole,
+    .bread-whole,
+    .guacamole-whole,
+    .zucchini-whole,
+    .sandwich-whole,
+    .shanghai-whole,
+    .falls-whole,
+    .chiangmai-whole
+    {
+        margin: 0 10px 30px 10px;
+    }
+    .pet-profile {
+        height:26rem;
+        width: auto;
+        max-width: 90%;
+    }
+
+    .recipes-profile {
+        width: 30rem;
+    }
+
+    .bacon,
+    .fitz,
+    .cody {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+        align-items: center;
+    }
+
+    .bacon p,
+    .fitz p,
+    .cody p {
+        margin-left: 0;
+    }
+
+    .bacon-photos,
+    .fitz-photos,
+    .cody-photos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .shanghai-photos1,
+    .shanghai-photos2,
+    .falls-photos1,
+    .thailand-photos1,
+    .thailand-photos2 {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+    .middle-grid {
+        grid-column: 1 / -1;
+    }
+    .two-rows {
+        grid-row: 2 / 4;
+    }
+
+    .falls-photos2 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .falls-photos2 figure{
+        max-width: 50%;
+    }
+
+    .shanghai-photos2 figure img,
+    .falls-photos2 figure img {
+        height: 250px;
+        width: 320px;
+    }
+
+    .bread-items,
+    .guacamole-items {
+        max-width: 30%;
+    }
+
+    .fitz-items,
+    .bacon-items,
+    .cody-items {
+        height: 20rem;
+    }
+
+    .cookie-procedure,
+    .bread-procedure,
+    .guacamole-procedure,
+    .zucchini-procedure,
+    .sandwich-procedure {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+    }
+
+    .cookie-ingredients,
+    .bread-ingredients,
+    .guacamole-ingredients,
+    .zucchini-ingredients,
+    .sandwich-ingredients {
+        margin-left: 0;
+    }
+
+    .cookie-steps,
+    .bread-steps,
+    .guacamole-steps,
+    .zucchini-steps,
+    .sandwich-steps {
+        margin-right: 30px;
+    }
+
+}
+
+
+/*laptop*/
+/*
+@media screen and (min-width: 1000px){
+    p, li, figcaption {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .bacon-photos, 
+    .fitz-photos,
+    .cody-photos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .bacon-items,
+    .fitz-items,
+    .cody-items {
+        height: 300px;
+    }
+
+    .bacon-pic {
+        width: 550px;
+    }
+
+    .fitz-pic {
+        height: 600px;
+    }
+
+    .likes {
+        margin: 50px auto;
+    }
+
+    .cookie-photos,
+    .bread-photos,
+    .guacamole-photos,
+    .zucchini-photos,
+    .sandwich-photos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cookie-items,
+    .zucchini-items,
+    .sandwich-items {
+        height: 270px;
+    }
+
+    .bread-items,
+    .guacamole-items {
+        height: 500px;
+    }
+
+    .cookie-pic,
+    .guacamole-pic,
+    .zucchini-pic {
+        height: 450px;
+    }
+
+    .bread-pic {
+        width: 500px;
+    }
+
+    .sandwich-pic {
+        height: 500px;
+    }
+
+    .cookie-procedure,
+    .bread-procedure,
+    .guacamole-procedure,
+    .zucchini-procedure,
+    .sandwich-procedure {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+    }
+
+    .cookie-ingredients,
+    .bread-ingredients,
+    .guacamole-ingredients,
+    .zucchini-ingredients,
+    .sandwich-ingredients {
+        margin-left: 50px;
+    }
+
+    .cookie-steps,
+    .bread-steps,
+    .guacamole-steps,
+    .zucchini-steps,
+    .sandwich-steps {
+        margin-right: 70px;
+    }
+
+    .shanghai-photos1,
+    .shanghai-photos2,
+    .falls-photos1,
+    .falls-photos2,
+    .thailand-photos1,
+    .thailand-photos2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .shanghai-photos1 img,
+    .shanghai-photos2 img,
+    .falls-photos1 img,
+    .falls-photos2 img, 
+    .thailand-photos1 img,
+    .thailand-photos2 img:not(.temple) {
+        height: 400px;
+        width: auto;
+    }
+
+    .middle-grid {
+        grid-column: 1 / 3;
+    }
+
+    .two-rows {
+        grid-row: 2 / 4;
+    }
+}
+*/
