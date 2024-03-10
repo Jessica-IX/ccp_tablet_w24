@@ -37,6 +37,7 @@ a.recipes-link {
     color: rgb(2, 2, 255);
 }
 
+
 .dropdown a {
     font-family: "Gill Sans", Times, Arial;
     font-weight: bold;
@@ -72,6 +73,7 @@ li.nav-button {
     background-color: black;
     padding: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 li.active {
@@ -79,11 +81,12 @@ li.active {
     border-top: 2px solid black;
     border-bottom: 3px solid black;
     border-radius: 50%;
+    font-family: "Arial Black",  "Gill Sans", Arial, sans-serif;
+    font-weight: bolder;
 }
 
 li.active a{
     color: black;
-    font-family: "Arial Black",  "Gill Sans", Arial, sans-serif;
     font-style: italic;
     text-decoration: underline;
 }
