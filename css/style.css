@@ -31,12 +31,12 @@ main {
 a:not(.recipes-link) {
     color: white;
     text-decoration: none;
-    font-family: "Arial Black", "Gill Sans", Times, sans-serif;
+    font-family: "Arial Black", "Gill Sans", Arial, sans-serif;
 }
+
 a.recipes-link {
     color: rgb(2, 2, 255);
 }
-
 
 .dropdown a {
     font-family: "Gill Sans", Times, Arial;
@@ -46,6 +46,10 @@ a.recipes-link {
     padding: 15px 3px;
     background-color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
+}
+
+.nav-button a {
+    font-weight: bolder;
 }
 
 
