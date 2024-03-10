@@ -180,7 +180,7 @@ h2 {
     font-size: 1.3rem;
     text-align: center;
     padding: 5px;
-    font-family: "Arial Black", Georgia, Times;
+    font-family: "Arial Black", "Gill Sans", Arial, sans-serif;
     color: white;
     background-color: black;
 }
