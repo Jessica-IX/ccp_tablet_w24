@@ -37,17 +37,16 @@ a.recipes-link {
     color: rgb(2, 2, 255);
 }
 
-.dropdown li a {
+.dropdown a {
     font-family: "Gill Sans", Times, Arial;
     font-weight: bold;
-}
-
-.dropdown li {
     border-top: 5px solid white;
     font-size: 0.8rem;
-    padding: 5px 3px;
+    padding: 15px 3px;
     background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
 }
+
 
 a.skip-to-content-link {
     position: absolute; 
@@ -84,7 +83,7 @@ li.active {
 
 li.active a{
     color: black;
-    font-family: "Arial Black", Arial, sans-serif;
+    font-family: "Arial Black",  "Gill Sans", Arial, sans-serif;
     font-style: italic;
     text-decoration: underline;
 }
@@ -94,7 +93,7 @@ li {
     line-height: 1.5;
 }
 
-ul:not(.navigation, .dropdown) {
+ul:not(.navigation) {
     list-style-type: disc;
     margin-left: 20px;
     list-style-position: inside;
@@ -107,7 +106,7 @@ ol {
 
 h1 {
     margin: 5px;
-    font-family: "Arial Black", Arial, sans-serif;
+    font-family: "Arial Black", "Gill Sans", Arial, sans-serif;
     font-style: italic;
     font-size: 1.7rem;
     padding: 10px;

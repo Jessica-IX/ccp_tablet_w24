@@ -5,11 +5,19 @@ if (window.innerWidth >= 700) {
 
     document.addEventListener('click', function(event) {
         var target = event.target;
+        var anchorPets = document.querySelector('.pets-dropdown a');
+        var anchorRecipes = document.querySelector('.recipes-dropdown a');
+        var anchorTravel = document.querySelector('.travel-dropdown a');
+
 
         if (target.matches('.pets-nav a')) {
             event.preventDefault();
             if (!petsNavClicked) {
                 showDropdown(target);
+                hideDropdown(anchorRecipes);
+                hideDropdown(anchorTravel);
+                recipesNavClicked = false;
+                travelNavClicked = false;
             } else {
                 hideDropdown(target);
             }
@@ -18,6 +26,10 @@ if (window.innerWidth >= 700) {
             event.preventDefault();
             if (!recipesNavClicked) {
                 showDropdown(target);
+                hideDropdown(anchorPets);
+                hideDropdown(anchorTravel);
+                petsNavClicked = false;
+                travelNavClicked = false;
             } else {
                 hideDropdown(target);
             }
@@ -26,6 +38,10 @@ if (window.innerWidth >= 700) {
             event.preventDefault();
             if (!travelNavClicked) {
                 showDropdown(target);
+                hideDropdown(anchorPets);
+                hideDropdown(anchorRecipes);
+                petsNavClicked = false;
+                recipesNavClicked = false;
             } else {
                 hideDropdown(target);
             }
@@ -42,7 +58,7 @@ if (window.innerWidth >= 700) {
 
     document.addEventListener('focusout', function(event) {
         var target = event.target;
-        if (target.matches('.dropdown li:last-child a')) {
+        if (target.matches('.dropdown a:last-child')) {
             hideDropdown(target);
         }
     });
@@ -50,14 +66,15 @@ if (window.innerWidth >= 700) {
     document.addEventListener('click', function(event) {
         var target = event.target;
 
-        if (target.matches('.dropdown li a')) {
+        if (target.matches('.dropdown a')) {
             hideDropdown(target);
         }
     });
     function showDropdown(anchor) {            
         var dropdown = anchor.parentElement.nextElementSibling;
         if (dropdown && dropdown.classList.contains('dropdown')) {
-            dropdown.style.display = 'block';
+            dropdown.style.display = 'grid';
+            dropdown.style.alignContents = 'start';
         }
 
         if (dropdown.classList.contains('pets-dropdown')) {
@@ -75,12 +92,19 @@ if (window.innerWidth >= 700) {
     }
 
     function hideDropdown(anchor) {
-        var dropdown = anchor.parentElement.parentElement;
+        if (anchor.parentElement.classList.contains('nav-button')) {
+            anchor.parentElement.nextElementSibling.style.display = 'none';
+        }
+        if (anchor.parentElement.classList.contains('dropdown')) {
+            anchor.parentElement.style.display = 'none';
+        }
+        /*
+        var dropdown = anchor.parentElement;
         if (dropdown && dropdown.classList.contains('dropdown')) {
             dropdown.style.display = 'none';
         }
         if (dropdown && dropdown.classList.contains('navigation')) {
             anchor.parentElement.nextElementSibling.style.display = 'none';
-        }
+        }*/
     }
 }
