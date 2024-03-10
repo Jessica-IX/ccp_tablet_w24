@@ -21,7 +21,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    padding: 25px;
     text-align: center;
     line-height: 2;
     color: white;
@@ -32,7 +31,10 @@ main {
 a:not(.recipes-link) {
     color: white;
     text-decoration: none;
-    font-family: "Arial Black", Helvetica, sans-serif;
+    font-family: "Arial Black", "Gill Sans", Times, sans-serif;
+}
+a.recipes-link {
+    color: rgb(2, 2, 255);
 }
 
 .dropdown li a {
@@ -114,6 +116,7 @@ h1 {
     color:  black;
 }
 
+.homepage-title,
 .pets-title,
 .recipes-title,
 .travel-title {
@@ -156,6 +159,8 @@ h1 {
     background-color: rgb(252, 235, 183);
 }
 
+.homepage-title,
+.index-main,
 .zucchini-whole {
     background-color: rgb(240, 225, 251);
 }
